@@ -76,9 +76,23 @@ export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # zplug plugins
+if [[ $OSTYPE = (darwin)* ]]; then
+  zplug "lib/clipboard",         from:oh-my-zsh
+  zplug "plugins/osx",           from:oh-my-zsh
+  zplug "plugins/brew",          from:oh-my-zsh, if:"(( $+commands[brew] ))"
+  zplug "plugins/macports",      from:oh-my-zsh, if:"(( $+commands[port] ))"
+fi
+
+ZSH_AUTOSUGGEST_STRATEGY=(history)
 
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+
+if ! zplug check; then
+  zplug install
+fi
+
+zplug load
 
 source $ZSH/oh-my-zsh.sh
 
