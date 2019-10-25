@@ -7,6 +7,8 @@ brew install nvm
 brew install pyenv
 brew install graphviz
 brew install zplug
+# pdftotext
+brew install poppler
 
 # allow to install beta version of apps
 brew tap homebrew/cask-versions
