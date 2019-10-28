@@ -9,6 +9,13 @@ brew install graphviz
 brew install zplug
 # pdftotext
 brew install poppler
+brew install mutt
+# mutt config
+mkdir -p ~/.mutt/cache/headers
+mkdir ~/.mutt/cache/bodies
+touch ~/.mutt/certificates
+touch ~/.mutt/muttrc
+# copy WL config from keybase
 
 # allow to install beta version of apps
 brew tap homebrew/cask-versions
