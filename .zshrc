@@ -138,3 +138,10 @@ function code {
         open -a "Visual Studio Code" "$argPath"
     fi
 }
+
+# GVM & Go
+[[ -s"$HOME/.gvm/scripts/gvm" ]]
+source "$HOME/.gvm/scripts/gvm"
+export GOPATH=$HOME/go
+export GOBIN=$GOPATH/bin
+export PATH=${PATH}:$GOBIN%

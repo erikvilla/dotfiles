@@ -35,6 +35,9 @@ brew cask install iterm2
 brew cask install docker
 brew cask install spectacle
 
+# gvm
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
 # Open installers not in cask
 open https://www.archimatetool.com/
 open https://apps.apple.com/us/app/tomato-one-free-focus-timer/id907364780
