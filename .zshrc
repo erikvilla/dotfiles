@@ -140,15 +140,19 @@ function code {
 }
 
 # GVM & Go
+# update when init.sh version changes
+gvm use go1.13.4
+
 [[ -s"$HOME/.gvm/scripts/gvm" ]]
 source "$HOME/.gvm/scripts/gvm"
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=${PATH}:$GOBIN
 
+
 #set pyenv python version
 # @see https://github.com/pyenv/pyenv
-PYENV_VERSION=3.8.0
+export PYENV_VERSION=3.8.0
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then

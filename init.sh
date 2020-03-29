@@ -4,7 +4,6 @@
 # brew installs
 brew install git
 brew install nvm
-brew install pyenv
 brew install graphviz
 brew install zplug
 # pdftotext
@@ -30,13 +29,11 @@ brew cask install slack
 brew cask install postman
 brew cask install xmind-zen
 brew cask install grammarly
+brew cask install firefox
 brew cask install google-chrome
 brew cask install iterm2
 brew cask install docker
 brew cask install spectacle
-
-# gvm
-bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
 
 # Open installers not in cask
 open https://www.archimatetool.com/
@@ -47,6 +44,15 @@ open https://www.oracle.com/technetwork/java/javase/downloads/jdk13-downloads-56
 
 # oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# python and version manager installations
+brew install pyenv
+pyenv install 3.8.0
+
+# go and version manager installations
+bash < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+# update when necessary
+gvm install go1.13.4
 
 # TODO: copy .gitconfig to ~/
 # TODO: replace .zshrc from repo version
